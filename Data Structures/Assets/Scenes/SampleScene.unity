@@ -161,7 +161,7 @@ MonoBehaviour:
   capsulePrefab: {fileID: 8282573033700532168, guid: 84ba0b8134b39074386ca621f1eb52ab, type: 3}
   cubeTwoPrefab: {fileID: 1636501981444286525, guid: f2a506f9003c74f4f8150882650c889d, type: 3}
   minPosition: {x: -12, y: -5, z: 10}
-  maxPosition: {x: 5.9, y: 6.1, z: 11}
+  maxPosition: {x: 11, y: 6.1, z: 11}
   display: {fileID: 1584486041}
 --- !u!114 &169052066
 MonoBehaviour:
