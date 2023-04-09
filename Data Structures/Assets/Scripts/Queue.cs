@@ -12,6 +12,8 @@ public class Queue : MonoBehaviour
     public GameObject spherePrefab;
     public GameObject cubePrefab;
     public GameObject cylinderPrefab;
+    public GameObject capsulePrefab;
+    public GameObject cubeTwoPrefab;
 
     public Vector3 minPosition;
     public Vector3 maxPosition;
@@ -38,18 +40,36 @@ public class Queue : MonoBehaviour
         timer += Time.deltaTime;
         
         //if you press e
-        if (Input.GetKeyDown(KeyCode.E))
+        if (Input.GetKeyDown(KeyCode.Q))
         {
             //it will add the prefab to the queue
             SpawnQueue.Enqueue(spherePrefab);
-            Debug.Log("Sphere Position" + transform.position);
+            //Debug.Log("Sphere Position" + transform.position);
         }
 
         //add prefab to queue when you press c
-        if (Input.GetKeyDown(KeyCode.C))
+        if (Input.GetKeyDown(KeyCode.W))
         {
             SpawnQueue.Enqueue(cubePrefab);
-            Debug.Log("Cube");
+            //Debug.Log("Cube" + transform.position);
+        }
+
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            SpawnQueue.Enqueue(cylinderPrefab);
+            //Debug.Log("Cylinder" + transform.position);
+        }
+
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            SpawnQueue.Enqueue(capsulePrefab);
+            //Debug.Log("Capsule" + transform.position);
+        }
+
+        if (Input.GetKeyDown(KeyCode.T))
+        {
+            SpawnQueue.Enqueue(cubeTwoPrefab);
+            //Debug.Log("CubeTwo" + transform.position);
         }
 
         //if the timer that is counting is greater or equal to timePerTurn which is 5 seconds
@@ -86,6 +106,7 @@ public class Queue : MonoBehaviour
                 Random.Range(minPosition.z, maxPosition.z));
             //Instantiate the object at a random position
             Instantiate(obj, randomPos, transform.rotation);
+            Debug.Log(randomPos);
         }
             
     }
