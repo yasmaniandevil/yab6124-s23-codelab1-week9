@@ -59,7 +59,7 @@ public class Queue : MonoBehaviour
             display.text = "time is up";
             //run the show queue function, that shows all objects that are in the queue
             ShowQueue();
-            //timer = 0; //Reset the timer after the objects have been shown
+            timer = 0; //Reset the timer after the objects have been shown
 
         }
         else
